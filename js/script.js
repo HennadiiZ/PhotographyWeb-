@@ -3,8 +3,8 @@
 const header__burger = document.querySelector('.header__burger'),
       header__menu = document.querySelector('.header__menu');
 
-const header__menu_locations = document.querySelector('._locations'),
-      header__menu_benefits = document.querySelector('._benefits'),
+const header__menu_locations = document.querySelector('._about'),
+      header__menu_benefits = document.querySelector('._work'),
       header__menu_contact = document.querySelector('._contact');
 
     function burger(){
