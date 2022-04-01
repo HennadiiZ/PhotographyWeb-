@@ -1,0 +1,288 @@
+/* =============================== BOOTSTRAPPING ================================= */
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  *,*:before,*:after {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  :focus,:active{outline: none;}
+  a:focus,a:active{outline: none;}
+  
+  nav,footer,header,aside{display:block;}
+  
+  html, body {
+    height:100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-align-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  input,button,textarea{ 
+    font-family: inherit;
+  }
+  
+  input::-ms-clear{display: none;}
+  button{cursor: pointer;}
+  button::-moz-focus-inner {padding:0; border:0;}
+  a, a:visited{text-decoration: none;}
+  a:hover{ text-decoration: none;}
+  ul li{list-style: none;}
+  img{vertical-align: top;}
+  
+  h1,h2, h3, h4, h5, h6{
+    /* font-size:inherit; */
+  }
+  html,  
+  body{
+      height:100%;
+      line-height: 1;
+      font-size: 16px;
+      color: #000;
+  }
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}  
+  
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+  
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+.main{
+  flex: 1 1 auto;
+}
+
+h1{
+    font-size: 2.6rem;
+}
+
+h2{
+    font-size: 2.1rem;
+}
+h3{
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+h4, h5{
+    font-size: 1.5rem;
+}
+
+li,button,label,input,p{
+    font-size: 2rem;
+}
+
+   
+/* =============================== HEADER NAV ================================= */
+.main-head {
+    padding: 1rem 0;
+    text-align: end;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.main-head::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #131c27;
+    z-index: 2;
+}
+
+.head {}
+
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    min-height: 3rem;
+    align-items: center;
+}
+.logo{
+    position: relative;
+    z-index: 3;
+}
+nav a{
+    color: white;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index:2 ;
+}
+.nav-links .nav-link{
+    margin-right: 20px;
+}
+.nav-links .nav-link a{
+    color:  white;
+    transition: all 0.3s ease 0s;
+}
+.nav-links .nav-link a:hover{
+    color:  rgb(202, 202, 202);
+}
+
+.header__burger{
+    display: none;
+}
+
+.content{
+    padding: 5.6rem 0px 0px 0px;
+}
+
+/* =============================== WHOLE BODY ================================= */
+
+
+
+
+
+/* =============================== FOOTER ================================= */
+.main-footer{
+    color: white;
+    background: #131c27;
+}
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+    align-items: center;
+}
+
+/* =============================== MEDIA QUERIES ================================= */
+@media (max-width: 999px) {}
+
+@media (max-width: 900px){
+    .nav-link a{
+       font-size: 85%;
+    }
+}
+
+@media (max-width: 800px){}
+
+@media (max-width: 767px){}
+
+@media (max-width: 660px){}
+
+@media (max-width: 510px){}
+
+    @media (max-width: 767px){
+/* =============================== BURGER MENU ================================= */
+        html{
+           font-size: 65%;
+        }
+        body.lock{
+            overflow: hidden;
+        }
+        nav{
+            height: 2.5rem;
+        }
+        .logo h1{
+           font-size: 2rem;
+        }
+        .header__burger{
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 3;
+        }
+        .header__burger span{
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            top: 9px;
+            transition: all 0.3s ease 0s;
+        }
+        .header__burger::before,
+        .header__burger::after{
+            content: '';
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: all 0.3s ease 0s;
+        }
+        .header__burger::before{
+            top: 0;
+        }
+        .header__burger::after{
+            bottom: 0;
+        }
+        .header__burger.active span{
+            transform: scale(0);
+        }
+        .header__burger.active::before{
+              transform: rotate(45deg);
+              top: 9px;
+        }
+        .header__burger.active::after{
+            transform: rotate(-45deg);
+            bottom: 9px;
+        }
+        .header__menu{  
+            position: fixed;
+            top: -100%;
+            left: 0; 
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            transition: all 0.3s ease 0s;
+            background-color: rgb(107, 107, 103);
+            padding: 70px 0px 0px 0px;
+        }
+    
+        .header__menu.active{
+            top: 0;
+        }
+    
+        .nav-links{  
+            display: block;
+        }
+    
+        .nav-links li{  
+            margin: 25px 0;
+        }
+    
+        .nav-link{  
+            font-size: 27px;
+        }
+    } 
+    
+   
+@media (max-width: 767px){
+       .content{
+           padding: 5rem 0px 0px 0px;
+       }
+/* =============================== BURGER MENU ================================= */
+}
+
