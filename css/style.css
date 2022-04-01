@@ -55,6 +55,15 @@ body{
     /* font-family: 'Lato', sans-serif;
     font-family: 'Poppins', sans-serif; */
 } 
+
+/* ===============================  FLEX CLASS ================================= */
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ===============================  VARIABLES ================================= */ 
 html{
     /* --header1: 2rem; */
