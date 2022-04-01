@@ -56,6 +56,23 @@ body{
     font-family: 'Poppins', sans-serif; */
 } 
 
+@font-face {
+    font-family: 'Ruhl';
+    src: url('/fonts/FrankRuhlLibre-Regular.ttf');
+}
+@font-face {
+    font-family: 'Ruhl-light';
+    src: url('/fonts/FrankRuhlLibre-Light.ttf');
+}
+@font-face {
+    font-family: 'Ruhl-medium';
+    src: url('/fonts/FrankRuhlLibre-Medium.ttf');
+}
+@font-face {
+    font-family: 'Ruhl-bold';
+    src: url('/fonts/FrankRuhlLibre-Bold.ttf');
+}
+
 /* ===============================  FLEX CLASS ================================= */
 .flex{
     display: flex;
