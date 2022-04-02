@@ -224,7 +224,7 @@ nav a{
 
 .hero{
     text-align: center;
-    height: 90vh;
+    min-height: 90vh;
 }
 
 .hero-wrapper{
@@ -261,19 +261,27 @@ nav a{
     transition: all 0.3s ease 0s;
 }
 .hero-introduction a:hover{
-   
+
     border: 3px solid white;
     transition: all 0.3s ease 0s;
 }
 
 .hero-picture{
     width: 50%;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-picture img{
     width: 100%;
     background: var(--color-light-gray);
+    object-fit: cover;
+    z-index: 2;
 }
+
+
+
+
 
 
 
@@ -300,9 +308,32 @@ nav a{
 
 @media (max-width: 800px){}
 
-@media (max-width: 767px){}
+@media (max-width: 767px){
+
+}
+
+@media (max-width: 730px){
+    .hero-introduction{
+        width: 100%;
+        padding: 70px 30px;  
+    }
+
+    .hero-picture{
+        width: 100%;
+    }
+
+    .hero-picture img{
+        /* height: 80vh; */
+    }
+}
 
 @media (max-width: 660px){}
+
+@media (max-width: 600px){
+    .hero-picture img{
+        
+    }
+}
 
 @media (max-width: 510px){}
 
@@ -368,7 +399,6 @@ nav a{
             overflow: auto;
             transition: all 0.3s ease 0s;
             background-color: var(--color-dark-gray);
-            opacity: .7;
             padding: 70px 0px 0px 0px;
         }
     
