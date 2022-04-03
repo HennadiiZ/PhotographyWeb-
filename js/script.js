@@ -3,9 +3,7 @@
 const header__burger = document.querySelector('.header__burger'),
       header__menu = document.querySelector('.header__menu');
 
-const header__menu_locations = document.querySelector('._about'),
-      header__menu_benefits = document.querySelector('._work'),
-      header__menu_contact = document.querySelector('._contact');
+const nav__links = document.querySelectorAll('.nav-links');
 
     function burger(){
         header__burger.classList.toggle('active'); 
@@ -14,12 +12,9 @@ const header__menu_locations = document.querySelector('._about'),
     };
 
 header__burger.addEventListener('click', ()=> burger());
-
-header__menu_locations.addEventListener('click', ()=> burger());
-header__menu_benefits.addEventListener('click', ()=> burger());
-header__menu_contact.addEventListener('click', ()=> burger());
-
-
+nav__links.forEach(link=>{
+  link.addEventListener('click', ()=> burger());
+})
 
 // =============================== FORM AJAX. ===============================
 

@@ -390,6 +390,16 @@ label{
     margin-top: 15px;
 }
 
+img.head-pic{
+    border-left: 8px solid white;
+    border-bottom: 8px solid white;
+}
+
+img.footer-pic{
+    border-left: 8px solid white;
+    border-top: 8px solid white;
+}
+
 /* =============================== FOOTER ================================= */
 .main-footer{
     color: white;
@@ -443,6 +453,10 @@ label{
     }
     .gallery{
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    img.head-pic , img.footer-pic{
+        border: 0px solid white;
     }
 }
 
