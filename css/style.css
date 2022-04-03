@@ -302,6 +302,7 @@ nav a{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background: var(--color-very-light-gray);
 }
 .about-text-block{
     padding: 0px 30px;
@@ -312,6 +313,7 @@ nav a{
 }
 .about-text p{
     line-height: 25px;
+    opacity: .7;
 }
 
 /* =============================== WORK ================================= */
@@ -357,6 +359,35 @@ nav a{
 }
 .gallery-caption h3{
     padding-bottom: 15px;
+}
+
+/* =============================== CONTACT ================================= */
+
+.form-input{
+ margin: 0px 0px 35px ;
+ padding: 5px;
+ border: 2px solid black;
+ background: transparent;
+}
+label{
+    margin-bottom: 10px;
+}
+
+.btn-submit{
+    color: black;
+    border: 3px solid black;
+    padding: 1rem 2.5rem;
+    transition: all 0.3s ease 0s;
+    background: transparent;
+}
+
+.btn-submit:hover{
+    border: 3px solid white;
+    transition: all 0.3s ease 0s;
+}
+
+#my-form-status{
+    margin-top: 15px;
 }
 
 /* =============================== FOOTER ================================= */
