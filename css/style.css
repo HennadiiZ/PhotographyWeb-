@@ -97,6 +97,8 @@ html{
     --color-light-gray: rgb(124, 124, 124);
     --color-very-light-gray: rgb(168, 168, 168);
     --color-purple: rgb(137, 117, 151);
+
+    scroll-behavior: smooth;
 }
 
 /* ===============================  FOOTER TO THE BOTTOM ================================= */
