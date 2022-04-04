@@ -52,29 +52,36 @@ const form = document.getElementById("my-form");
 // =============================== THE MODAL =================================
 
 // Get the modal
-var modal = document.getElementById("myModal");
+const modal = document.querySelector("#myModal");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var myButton = document.getElementById("myButton");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
+const myButton = document.querySelector("#myButton"); // button
+const modalImg = document.querySelector("#img01"); // modal pic
+const captionText = document.querySelector("#caption"); // caption - no need really
+ 
+// Get the <span> element that closes the modal
+const span = document.querySelector(".close");
+
 myButton.onclick = function(){
   modal.style.display = "block";
+  document.body.style.overflow = 'hidden';
   // modalImg.src = this.src;
   modalImg.src = modalImg.src;
   captionText.innerHTML = modalImg.alt;
 }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+function closeButton(){
+  modal.style.display = "none";
+  document.body.style.overflow = '';
+}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
+  closeButton();
 }
 
 modal.onclick = function(e) {
   if(e.target !== modalImg){
-    modal.style.display = "none";
+    closeButton();
   }
 }
